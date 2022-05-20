@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 minimum-scale=1, user-scalable=no">
     <title>Coway</title>
-    <link rel="stylesheet" href="../css/style.min.css">
-    <script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/common.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="./image/x-icon">
+    <link rel="icon" href="../assets/img/favicon.ico" type="./image/x-icon">
+    <script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/js/common.js"></script>
   </head>
   <body class="subpage">
     <div id="wrap">
@@ -52,7 +54,10 @@
           <div class="content">
             <h2 class="sub-title"><span>Location</span></h2>
             <div class="inner">
-              <div id="map" style="width: 1000px; height: 350px; margin: 50px auto 0;"></div>
+              <div class="map-wrap">
+                <div><img class="c-img" src="../assets/img/company_img.jpg" alt="company_img"></div>
+                <div id="map" style="width: 650px; height: 400px; margin: 50px auto 0;"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -126,7 +131,7 @@ var marker = new kakao.maps.Marker({
 });
 
 var infowindow = new kakao.maps.InfoWindow({
-            content: '<div class="map-info-window">코리아IT학원</div>'
+            content: '<div class="map-info-window">Coway</div>'
         });
         infowindow.open(map, marker);
         kakao.maps.event.addListener(map, 'click', function(mouseEvent) {

@@ -1,0 +1,123 @@
+// component
+.box {
+  display: flex;
+  .items {
+    box-sizing: border-box;
+    padding: 50px;
+    flex: 50%;
+    flex-shrink: 0;
+    font-size: $fontSizeMid;
+    .title {
+      font-size: $titleFontSizemid;
+      margin-bottom: 30px;
+      line-height: 40px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &.items_2 {
+    .items {
+      flex: 50%;
+    }
+  }
+}
+
+// community table
+table {
+  width: 100%;
+  table-layout: fixed;
+  tr {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid black;
+    border-collapse: separate;
+    th {
+      padding: 20px 15px;
+      text-align: left;
+      font-weight: 500;
+      font-size: $fontSizeSmall;
+      color: #fff;
+      text-transform: uppercase;
+    }
+    td {
+      padding: 15px;
+      height: 30px;
+      text-align: left;
+      vertical-align: middle; /*테이블 내에서 상하 정렬, default : top*/
+      font-weight: 300;
+      font-size: 14px;
+      color: $fontColorBasic;
+      border-bottom: 1px solid $fontColorPrimary;
+      border-spacing: 0;
+      border-collapse: separate;
+    }
+    th:nth-child(1), td:nth-child(1) {
+      width: 80px;
+    }
+    th:nth-child(2), td:nth-child(2) {
+      width: 140px;
+    }
+    th:nth-child(3), td:nth-child(3) {
+      width: 400px;
+    }
+  }
+}
+.tbl-header {
+  background-color: $tableBg;
+}
+.tbl-content {
+  height: auto;
+  overflow-x: auto;
+  margin-top: 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  & + .gbtn {
+    margin-top: 20px;
+    &.right {
+      float: right;
+    }
+  }
+}
+
+// arcodion
+.accordion {
+  width: 1000px;
+  dl {
+    margin: 50px auto;
+    dt {
+      font-size: 18px;
+      text-indent: 2em;
+      color: white;
+      line-height: 35px;
+      height: 35px;
+      background: $tableBg;
+    }
+    dd.row-dd {
+      overflow: hidden;
+      p{
+        display: flex;
+      }
+    }
+    dd {
+      height: 300px;
+      background: #f8f9fa;
+      p {
+        padding: 20px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+#map {
+  // background: red;
+}
+.map-wrap {
+  display: flex;
+  align-items: baseline;
+  .c-img {
+    width: 450px;
+    height: 400px;
+    margin-right: 30px;
+  }
+}
