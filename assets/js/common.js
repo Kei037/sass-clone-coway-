@@ -1,7 +1,4 @@
 $(function(){
-  console.log($("body"));
-  console.log(window.location.href);
-
   function splitLocation(name){
     let href = name.attr("href").split("/");
     href = href[href.length-1].split(".")[0];
@@ -34,4 +31,13 @@ $(function(){
     }
   })
   $(".intro").css("flex-direction","row");
+
+  console.log($(".map-change")[0]);
+  $(".map-change")[0].click(function(e){
+    console.log("Test");
+    $(".map-inner01").removeClass("active");
+    $(".map-inner02").addClass("active");
+    e.preventDefault();
+    return false;
+  })
 })

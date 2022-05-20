@@ -109,12 +109,21 @@ table {
   }
 }
 
-#map {
-  // background: red;
-}
 .map-wrap {
+  position: relative;
+  width: 1130px;
+  height: 460px;
+  display: block;
+  .active {
+    opacity: 1;
+  }
+}
+.map-inner01, .map-inner02, .map-inner03, .map-inner04, .map-inner05, .map-inner06 {
+  position: absolute;
   display: flex;
   align-items: baseline;
+  opacity: 0;
+  transition: .5s;
   .c-img {
     width: 450px;
     height: 400px;
@@ -126,4 +135,37 @@ table {
   width: 150px;
   text-align: center;
   padding: 6px 0;
+}
+
+
+.location-selcet {
+  position: relative;
+  width: 1000px;
+  height: 300px;
+  margin-top: 40px;
+  ul.ul-cl {
+    width: 300px;
+    // margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    .border-li {
+      .select-inner {
+        // margin-bottom: 30px;
+        margin: 0 10px 30px;
+        height: 70px;
+        padding: 10px;
+        width: 300px;
+        border: 1px solid black;
+        border-collapse : collapse;
+        a {
+          color: black;
+          display: block;
+          z-index: 500;
+          p {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
 }
