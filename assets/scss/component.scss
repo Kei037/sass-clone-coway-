@@ -116,6 +116,7 @@ table {
   display: block;
   .active {
     opacity: 1;
+    display: block;
   }
 }
 .map-inner01, .map-inner02, .map-inner03, .map-inner04, .map-inner05, .map-inner06 {
@@ -155,14 +156,18 @@ table {
         height: 70px;
         padding: 10px;
         width: 300px;
-        border: 1px solid black;
+        border: 1px solid $fontColorBasic;
         border-collapse : collapse;
         a {
-          color: black;
+          color: $fontColorBasic;
           display: block;
           z-index: 500;
+          span {
+            color: $fontColorBasic;
+          }
           p {
             margin-top: 5px;
+            color: $fontColorBasic;
           }
         }
       }
