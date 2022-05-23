@@ -32,12 +32,17 @@ $(function(){
   })
   $(".intro").css("flex-direction","row");
 
-  console.log($(".map-change")[0]);
+  console.log($(".select-inner")[0]);
   $(".map-change")[0].click(function(e){
     console.log("Test");
     $(".map-inner01").removeClass("active");
     $(".map-inner02").addClass("active");
-    e.preventDefault();
     return false;
+    e.preventDefault();
+  })
+  el().click(function(){
+    return false;
+    $(".map-inner01").removeClass("active");
+    $(".map-inner02").addClass("active");
   })
 })
